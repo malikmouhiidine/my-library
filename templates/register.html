@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+  <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" id='pass' placeholder="Password ( At least 6 characters ) " type="password">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" id="confirmation" placeholder="Password (again)" type="password" name='confirmation'>
+        </div>
+        <button class="btn btn-primary" type="submit" id='submitbutton' disabled="disabled">Register</button>
+
+        </div>
+
+    </form>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+         $("#pass").keyup(function(){
+          check_pass();
+         });
+        });
+
+
+
+
+        $('form').submit(function(evt) {
+            if ($('#pass').val() != $('#confirmation').val()) {
+                alert("passwords don't match");
+                evt.preventDefault();
+            }
+        });
+
+        setInterval(function () {
+           if($("#pass").val().length > 6)  {
+             $("#submitbutton").removeAttr("disabled");
+           } else {
+             $("#submitbutton").attr("disabled", "disabled");
+           }
+         }, 500); //Runs every 0.5s
+
+
+        setInterval(function () {
+           if($("#pass").val().length > 40)  {
+             alert("just quit it, that's to much");
+           }
+         }, 5000); //Runs every 0.5s
+    </script>
+{% endblock %}

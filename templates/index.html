@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    home page
+{% endblock %}
+
+
+
+{% block main %}
+    {% if length == 0 %}
+        <div class="alert alert-secondary" role="alert">
+            have a pleasant reading!
+        </div>
+    {% else %}
+        {% for row in rows %}
+        <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+        <div class="card" style="width: 100%; box-shadow: 10px 20px 13px rgba(0, 0, 0, 0.163); background-color: #f9e0ae;">
+                <div class="card-body">
+                <h1 class="card-title">{{ row['title'] }}</h1>
+                <p class="card-text">
+                    {{ row['description'] }}
+                </p>
+                <h6>{{ row['date'] }}</h6>
+                <a href="{{ row['url'] }}" class="card-link" target="_blank">Book link</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
