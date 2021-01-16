@@ -19,7 +19,7 @@ any book that no more needs plus this site allow the user to search for a book t
   * `pip install flask`for Flask, flash, jsonify, redirect, render_template, request, session, send_from_directory functions
   * `pip install Flask-Session` for Session function
   * `pip install tempfile2`for mkdtemp function
-  * `pip install Werkzeug` for hash password function and others
+  * `pip install Werkzeug` for default_exceptions, HTTPException, InternalServerError, werkzeug, check_password_hash, generate_password_hash functions
 
 ### Running the Flask web-based application
 
