@@ -13,13 +13,13 @@ any book that no more needs plus this site allow the user to search for a book t
 ### Libraries and prerequisites
 
 * `pip install` these libraries.
-  * `pip install os`
-  * `pip install datetime`
-  * `pip install cs50`
-  * `pip install flask`
-  * `pip install Flask-Session`
-  * `pip install tempfile2`
-  * `pip install Werkzeug`
+  * `pip install os` for helpful functions
+  * `pip install datetime` for datetime.now function
+  * `pip install cs50` for SQL function
+  * `pip install flask`for Flask, flash, jsonify, redirect, render_template, request, session, send_from_directory functions
+  * `pip install Flask-Session` for Session function
+  * `pip install tempfile2`for mkdtemp function
+  * `pip install Werkzeug` for hash password function and others
 
 ### Running the Flask web-based application
 
