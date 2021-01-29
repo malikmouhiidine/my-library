@@ -1,36 +1,12 @@
-/* * { border: 1px solid red; } */
-
 p {
-    color: #682c0e;
     font-size: 18px;
 }
 
-p {
-    background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
-    background-size: 0;
-    background-repeat: no-repeat;
-    display: inline;
-    -webkit-transition: 0.5s ease;
-    transition: 5s ease;
-}
-
-p:hover {
-    background-size: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
     color: #682c0e;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
     background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
     background-size: 0;
     background-repeat: no-repeat;
@@ -39,11 +15,7 @@ h5 {
     transition: 0.5s ease;
 }
 
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover {
+h1:hover {
     background-size: 90%;
 }
 
