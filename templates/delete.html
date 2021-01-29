@@ -1,30 +1,18 @@
-{% extends "layout.html" %}
-
-
-{% block title %}
-    home page
-{% endblock %}
-
-{% block main %}
-
-    {% if length == 0 %}
-        <div class="alert alert-secondary" role="alert">
-            you have no books!
-        </div>
-    {% else %}
-        <form method="post">
-            <div class="form-group">
-                <select multiple class="form-control" id="exampleFormControlSelect2" name='title' style="width: 400px;">
+{% extends "layout.html" %} {% block title %} home page {% endblock %} {% block main %} {% if length == 0 %}
+<div class="alert alert-secondary" role="alert">
+    you have no books!
+</div>
+{% else %}
+<form method="post">
+    <div class="form-group">
+        <select multiple class="form-control" name="title" style="height: 12em;margin-bottom: 2em">
                 {% for row in rows %}
                     <option>{{ row['title'] }}</option>
                 {% endfor %}
                 </select>
-                <div style="margin-top: 5%">
-                    <button type="submit" class="btn btn-primary mb-2">Delete</button>
-                </div>
-            </div>
-        </form>
-    {% endif %}
-
-
-{% endblock %}
+        <div>
+            <button type="submit" class="btn btn-primary mb-2">Delete</button>
+        </div>
+    </div>
+</form>
+{% endif %} {% endblock %}
