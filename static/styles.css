@@ -46,30 +46,19 @@ body {
     width: 40%;
 }
 
-#blinkinghelloworld {
-    position: absolute;
-    left: 80%;
-    top: 99%;
-    transform: translate(-50%, -50%);
-    font-size: 190%;
-    color: #7579e7;
-    font-family: "Courier New", Courier, monospace;
-    background-color: #b9fffc;
-}
-
 smap {
     color: #d4bbbb;
 }
 
 ::-moz-selection {
     /* Code for Firefox */
-    color: #d4bbbb;
-    background: #8d8d8d;
+    color: #ff7700;
+    background: #ee8f3c85;
 }
 
 ::selection {
-    color: #d4bbbb;
-    background: #8d8d8d;
+    color: #ff7700;
+    background: #ee8f3c85;
 }
 
 li a span {
@@ -85,44 +74,23 @@ main .form-control {
 }
 
 main {
+    padding: 2rem;
     /* scroll horizontally as needed */
     overflow-x: auto;
     /* center contents */
     text-align: center;
 }
 
-:root {
-    font-size: 16px;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e00;
-    --bg-secondary: #7979ca00;
-    --transition-speed: 600ms;
-}
-
 body::-webkit-scrollbar {
     width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #f9e0ae;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #ffffff;
-}
-
-body::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #ffffff;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: #ff7700;
 }
 
 .navbar::-webkit-scrollbar {
@@ -135,10 +103,6 @@ body::-webkit-scrollbar-thumb {
 
 .navbar::-webkit-scrollbar-thumb {
     background: #ffffff00;
-}
-
-main {
-    padding: 2rem;
 }
 
 .navbar {
