@@ -1,8 +1,10 @@
 /* * { border: 1px solid red; } */
+
 p {
     color: #682c0e;
     font-size: 18px;
 }
+
 p {
     background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
     background-size: 0;
@@ -12,39 +14,47 @@ p {
     transition: 5s ease;
 }
 
-p:hover  {
+p:hover {
     background-size: 100%;
 }
 
-
-h1, h2, h3, h4, h5{
-  color: #682c0e;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #682c0e;
 }
 
-h1 , h2 , h3 , h4 , h5  {
-  background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
-  background-size: 0;
-  background-repeat: no-repeat;
-  display: inline;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-h1:hover , h2:hover , h3:hover , h4:hover , h5:hover {
-  background-size: 90%;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
 }
 
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover {
+    background-size: 90%;
+}
 
 body {
     background-color: #f9e0ae;
 }
 
-
-
 b {
     font-size: 60px;
     color: rgb(4, 14, 4);
 }
-
 
 .float-container {
     padding: 20px;
@@ -54,16 +64,14 @@ b {
     width: 50%;
     float: left;
     padding: 20px;
-}  
-
-
-
-
+}
 
 #wrapper {
-    width: 70%;     /* specify a width! */
-    margin: 0 auto; /* center */
-  }
+    width: 70%;
+    /* specify a width! */
+    margin: 0 auto;
+    /* center */
+}
 
 .oneline {
     width: 100px;
@@ -72,14 +80,10 @@ b {
     display: inline-block;
 }
 
-
-
 .center {
     margin: auto;
     width: 40%;
-  }
-
-
+}
 
 #blinkinghelloworld {
     position: absolute;
@@ -92,61 +96,49 @@ b {
     background-color: #b9fffc;
 }
 
-
-
-
 smap {
-    color:  #d4bbbb;
+    color: #d4bbbb;
 }
 
-
-
-
-::-moz-selection { /* Code for Firefox */
-    color:  #d4bbbb;
-    background:  #8d8d8d;
+::-moz-selection {
+    /* Code for Firefox */
+    color: #d4bbbb;
+    background: #8d8d8d;
 }
 
 ::selection {
-    color:  #d4bbbb;
-    background:  #8d8d8d;
+    color: #d4bbbb;
+    background: #8d8d8d;
 }
 
-
-
-
-
-
-
-main .form-control
-{
-/* center form controls */
-display: inline-block;
-
-/* override Bootstrap's 100% width for form controls */
-width: auto;
+li a span {
+    font-size: 30px;
+    color: #c24914;
 }
 
-main
-{
-/* scroll horizontally as needed */
-overflow-x: auto;
-
-/* center contents */
-text-align: center;
+main .form-control {
+    /* center form controls */
+    display: inline-block;
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
 }
 
+main {
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+    /* center contents */
+    text-align: center;
+}
 
 :root {
-font-size: 16px;
-font-family: 'Open Sans';
---text-primary: #b6b6b6;
---text-secondary: #ececec;
---bg-primary: #23232e00;
---bg-secondary: #7979ca00;
---transition-speed: 600ms;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e00;
+    --bg-secondary: #7979ca00;
+    --transition-speed: 600ms;
 }
-
 
 body::-webkit-scrollbar {
     width: 0.5rem;
@@ -159,6 +151,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: #ffffff;
 }
+
 body::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -170,6 +163,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: #ffffff;
 }
+
 .navbar::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -181,6 +175,7 @@ body::-webkit-scrollbar-thumb {
 .navbar::-webkit-scrollbar-thumb {
     background: #ffffff00;
 }
+
 main {
     padding: 2rem;
 }
@@ -248,45 +243,44 @@ main {
 .fa-secondary {
     transition: var(--transition-speed);
 }
+
+
 /* Small screens */
+
 @media only screen and (max-width: 600px) {
     .navbar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
     }
-
     .logo {
-    display: none;
+        display: none;
     }
-
     .navbar-nav {
-    flex-direction: row;
+        flex-direction: row;
     }
-
     .nav-link {
-    justify-content: center;
+        justify-content: center;
     }
-
     main {
-    margin: 0;
+        margin: 0;
     }
 }
 
+
 /* Large screens */
+
 @media only screen and (min-width: 600px) {
     .navbar {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
+        top: 0;
+        width: 5rem;
+        height: 100vh;
     }
-
     .navbar:hover {
-    width: 16rem;
+        width: 16rem;
     }
-
     .navbar:hover .link-text {
-    display: inline;
+        display: inline;
     }
 }
 
