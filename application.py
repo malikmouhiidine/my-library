@@ -160,19 +160,26 @@ def delete():
     """delete a book from the list"""
     # first of all if the method is get so he just want to get the page
     if request.method == "GET":
+        # getting all his(user) books
         rows= db.execute("SELECT * FROM books WHERE id = :id", id=session["user_id"])
         length=0
+        # for loop to khow how much rows is there 
         for row in rows:
             length += 1
-        return render_template("delete.html", rows=rows, length=length)
+        return render_template("delete.html", rows=rows, length=length) # rendring delete template and passing rows and length variables because it's going to be a for loop there(jinja template) as well
     else:
+        # else if it's a POST method
+        # check first if he(user) didn't provide a title to delete
         if not request.form.get("title"):
-                return apology("missing something", 403)
+            # if he didn't, return an apology
+            return apology("missing something", 403)
 
-
+        # but if he provided a title
         else:
+            # execute a delete query where the title equal the title provided and the same id of the user
             db.execute(
                 "DELETE FROM books WHERE id=:id AND title=:title", id=session["user_id"], title=request.form.get("title"))
+            # redirect to home page
             return redirect("/")
 
 
@@ -184,20 +191,34 @@ def register():
     """Register user"""
     # first of all if the method is get so he just want to get the page
     if request.method == "GET":
+        # give him the page
         return render_template("register.html")
+    # else if the method is POST
     else:
+        # see if he didn't provide a username or password
         if not request.form.get("username") or not request.form.get("password"):
+            # return an apology with this message
             return apology("Must provide a username and a password and confirm that password, please be sure to do all these steps", 403)
+        # now if the password doesn't mach the comfirmation
+        # NOTE: there is a javascript message error that going to show up to the user but this is just if he(user) disabled javascript
         elif not request.form.get("password") == request.form.get("confirmation") :
-            print(request.form.get("password"))
-            print(request.form.get("confirmation"))
+            print(request.form.get("password")) # debugging output
+            print(request.form.get("confirmation")) # debugging output
+            # return an apology with this message
             return apology("Please make sure that the confirmation match the password", 403)
+        # now if everything is fine
         else:
+            # SELECT query that's going to see if the username already exist 
             rows = db.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))
+            # if it is!
             if len(rows) == 1:
+                # return an apology with this message
                 return apology("Username already exists", 403)
             else:
+                # else if no one have the same username
+                # we will generate a hash password
                 hash = generate_password_hash(request.form.get("password"))
+                # insert the username and hash to the users table
                 db.execute("INSERT INTO users (username, hash) VALUES (:username, :hash)", username=request.form.get("username"), hash=hash)
     return redirect("/")
 
