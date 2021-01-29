@@ -1,33 +1,18 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    add a book to my library
-{% endblock %}
-
-{% block main %}
-    <form method="post">
-        <ul class="form-style-1">
-            <li><label>Title of the book<span class="required">*</span></label><input type="text" name="title" class="form-control" style='width: 100%;'/></li>
-            <li>
-                <label>URL of the book<span class="required">*</span></label>
-                <input type="url" name="url" class="form-control" style='width: 100%;' value="https://">
-            </li>
-            <li>
-                <label>description <span class="required">*</span></label>
-                <textarea name="description" rows="5" class="form-control" placeholder="no more than 300 words" style='width: 100%;'></textarea>
-            </li>
-            <li>
-                <input type="submit" value="add" class="btn btn-primary"/>
-            </li>
-        </ul>
-        </form>
-
-
-
-        <style type="text/css">
-            ul
-            {
-            list-style-type: none;
-            }
-        </style>
+{% extends "layout.html" %} {% block title %} add a book to my library {% endblock %} {% block main %}
+<form method="post">
+    <ul class="form-style-1">
+        <li><label>Title of the book<span class="required">*</span></label><input type="text" name="title" class="form-control" style='width: 100%;' /></li>
+        <li>
+            <label>URL of the book<span class="required">*</span></label>
+            <input type="url" name="url" class="form-control" style='width: 100%;' value="https://">
+        </li>
+        <li>
+            <label>description <span class="required">*</span></label>
+            <textarea name="description" rows="5" class="form-control" placeholder="no more than 300 words" style='width: 100%;'></textarea>
+        </li>
+        <li>
+            <input type="submit" value="add" class="btn btn-primary" />
+        </li>
+    </ul>
+</form>
 {% endblock %}
