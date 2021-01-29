@@ -4,15 +4,11 @@ p {
 
 h1 {
     color: #682c0e;
-}
-
-h1 {
     background-image: linear-gradient(transparent calc(55% - 4px), #fc8621 4px);
     background-size: 0;
     background-repeat: no-repeat;
     display: inline;
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+    transition: 2s ease;
 }
 
 h1:hover {
@@ -21,11 +17,6 @@ h1:hover {
 
 body {
     background-color: #f9e0ae;
-}
-
-b {
-    font-size: 60px;
-    color: rgb(4, 14, 4);
 }
 
 .float-container {
@@ -40,9 +31,7 @@ b {
 
 #wrapper {
     width: 70%;
-    /* specify a width! */
     margin: 0 auto;
-    /* center */
 }
 
 .oneline {
