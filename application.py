@@ -220,6 +220,7 @@ def register():
                 hash = generate_password_hash(request.form.get("password"))
                 # insert the username and hash to the users table
                 db.execute("INSERT INTO users (username, hash) VALUES (:username, :hash)", username=request.form.get("username"), hash=hash)
+    # redirect to the home page
     return redirect("/")
 
 
